@@ -1,6 +1,7 @@
 package com.jetbrains;
 import java.util.Scanner;
 
+// These are weird imports. You shouldn't need them
 import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Util.println;
 import static jdk.nashorn.internal.objects.Global.print;
 
@@ -17,12 +18,23 @@ vegSandwich - need to sell 50/day
 public class SandwichShop {
 
     public static void main(String[] args) {
-        {
+       {
             Scanner keyboard = new Scanner(System.in);
 
+            // Missing period in all System.out.println() statements
             System out.println("Enter the number of veggie sandwiches sold today.");
             int vegSandwich = keyboard.nextInt();
             keyboard.skip("\n");
+            /* Brackets are needed when using if-else. It should look like this. Note the 
+              parenthesis () around the conditional and brackets {} around the blocks of code
+              
+            if (condition) {
+              // block of code to be executed if the condition is true
+            } else { 
+              // block of code to be executed if the condition is false
+            }
+            
+            */
                 if(vegSandwich >= 50)
                     System out.println("Made Goal");
                 else(System out.println("Fell short"));
