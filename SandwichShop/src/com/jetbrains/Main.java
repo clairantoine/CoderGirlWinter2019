@@ -14,38 +14,74 @@ vegSandwich - need to sell 50/day
  Prints either "Made goal" or "Fell short" if daily min was met.
 */
 
-public class SandwichShop {
+public class Main
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+        Scanner keyboard = new Scanner(System.in);
+        boolean allGoalsPass = true;
+
+        System.out.println("Enter the number of veggie sandwiches sold today.");
+        int vegSandwich = keyboard.nextInt();
+        keyboard.skip("\n");
+        if(vegSandwich >= 50)
         {
-            Scanner keyboard = new Scanner(System.in);
+            System.out.println("Made Goal");
+        }
+        else {
+            System.out.println("Fell short.");
+            allGoalsPass = false;
 
-            System out.println("Enter the number of veggie sandwiches sold today.");
-            int vegSandwich = keyboard.nextInt();
-            keyboard.skip("\n");
-                if(vegSandwich >= 50)
-                    System out.println("Made Goal");
-                else(System out.println("Fell short"));
+        }
+        System.out.println("Enter the number of burgers sold today.");
+        int burGers = keyboard.nextInt();
+        keyboard.skip("\n");
+        if(burGers >= 250)
+        {
+            System.out.println("Made goal");
+        }
+        else
+        {
+            System.out.println("Fell short");
+            allGoalsPass = false;
+        }
 
-            System out.println("Enter the number of burgers sold today.");
-            int burGers = keyboard.nextInt();
-            keyboard.skip("\n");
-                if(burGers >= 250)
-                    System out.println("Made goal");
-                else(System out.println("Fell short"))
+        System.out.println("Enter the number of sub sandwiches sold today.");
+        int subs = keyboard.nextInt();
+        keyboard.skip("\n");
+        if(subs >= 180)
+        {
+            System.out.println("Made Goal");
+        }
+        else
+        {
+            System.out.println("Fell short");
+            allGoalsPass = false;
+        }
 
-            System out.println("Enter the number of sub sandwiches sold today.");
-            int subs = keyboard.nextInt();
-            keyboard.skip("\n");
-                if(subs >= 180)
-                    System out.println("Made Goal");
-                else(System out.println("Fell short"));
+        System.out.println("Enter number of cups of soup sold today.");
+        int soup = keyboard.nextInt();
+        keyboard.skip("\n");
+        if(soup >= 70)
+        {
+            System.out.println("Made Goal");
+        }
+        else
+        {
+            System.out.println("Fell short");
+            allGoalsPass = false;
+        }
 
-            System out.println("Enter number of cups of soup sold today.");
-            int soup = keyboard.nextInt()
-            keyboard.skip("\n");
-                if(soup >= 70)
-                    System out.println("Made Goal");
-                else(System out.println("Fell short"));
+        if(allGoalsPass)
+        {
+            System.out.println("You met your goal!");
+        }
+        else
+        {
+            System.out.println("You didn't make your goal!");
+        }
+
+
     }
 }
